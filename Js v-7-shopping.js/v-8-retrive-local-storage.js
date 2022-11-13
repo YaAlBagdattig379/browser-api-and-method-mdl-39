@@ -6,7 +6,6 @@ const displayLocalStorageCart = () =>{ // to display local storage cart/data
     for(const name in cart){
         displayProduct(name)
     }
-    console.log('eh hello display local storage cart !')
 }
 const addItem  = () =>{ // first function>>>  1
     const nameField = document.getElementById("product-name");
@@ -16,10 +15,8 @@ const addItem  = () =>{ // first function>>>  1
     }
     // display in the UI
     displayProduct (name);
-    
     // add to local Storage
     addProductToCart(name)
-    
     // to clear 
     nameField.value = '';
 }
@@ -52,7 +49,6 @@ const addProductToCart = name =>{  // fourth function>>>  4
      localStorage.setItem('cart',cartStringified)
      console.log(cart)
 }
-
 // fifth function>>>  5
 const placeOrder = () =>{//click >> display data and local storage data remove hbe
     document.getElementById('products').textContent = '';
